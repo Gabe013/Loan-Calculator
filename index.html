@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Loan Calculator</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<h1>Loan Calculator</h1>
+	<p>Please fill the required fields to calculate your loan amount and related expenses</p>
+	<form action="insert.php" method="post" name="loanForm">
+	<fieldset>
+		<label for="loan_amount_entry">Enter your desired Loan Amount: <input id="loan_amount_entry" name="loanamount"
+type="text" placeholder="Enter amount without decimal ',' or '.'" pattern="[0-9]{5,8}" size="28" minlength="5" maxlength="8"required/> </label>
+		<br>
+		<div><p>Choose Loan Duration in years:</p>
+		<label for="ten-years">
+			<input type="radio" id="ten-years" name="loan_duration" value="10" placeholder="10-year loan" required/> 10 years </label>
+			<label for="twenty-years">
+			<input type="radio" id="twenty-years" name="loan_duration" value="20" placeholder="20-year loan" required/> 20 years </label>
+			<label for="thirty-years">
+			<input type="radio" id="thirty-years" name="loan_duration" value="30" placeholder="30-year loan" required/> 30 years </label>
+		</div>
+		<br>
+		<label for="calculate-button">
+		<input type="button" id="calculate-button" value="Calculate Loan Total and Monthly Rate"></label>
+		<br>
+		<div id="loan-calculations">
+	<label for="total-loan-amount"<p id="total-loan-amount">Total Loan Amount:</p></label>
+		<label for="loan-rate-amount"<p id="loan-rate-amount">Loan Rate Amount:</p></label>
+		</div>
+	</fieldset>
+		</form>
+	<script src="script.js"></script>
+</body>
+</html>
