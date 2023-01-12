@@ -1,11 +1,14 @@
-//function validateInput () {
 document.addEventListener("DOMContentLoaded", function(event) {
-let loanInput = document.getElementById("loan_amount_entry").value;
-if (loanInput.oninput != Number) {
+var loanInput = document.getElementById("loan_amount_entry");
+	loanInput.addEventListener("keyup", function() {
+var loan_amount_entry =	loanInput.value;	
+if (loan_amount_entry.oninput != Number && [0-9],{5:8} === false) {
 	alert("Please input a valid number with 5 to 8 digits without any decimal ',' or '.'!");
-	return;
 }
+
 }, false);
+  
+});
 
 /*
 function loanCalculate (loanAmount,loanDuration) {
